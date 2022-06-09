@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block hero %}
+    <section id="hero">
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex align-items-center">
+                <a href="index.html" class="logo me-auto"><img src="{% static 'img/E3_Logo.png' %}" alt=""></a>
+
+                <h1 class="">Electronic Enternainment Expo</h1>
+                
+                <a href="#about" class="get-started-btn scrollto">Get Started</a>
+            </div>
+          </header>
+        <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+            <h1>From reality to virtual</h1>
+            {% comment %} <h2>We are team of talented designers making websites with Bootstrap</h2> {% endcomment %}
+            <div class=" mt-5">
+                {% comment %} <a href="google.com" class="btn-get-started ">Get Started</a> {% endcomment %}
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">    
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                      <img src="{% static 'img/Cyberpunk.jpg' %}" class="testimonial-img" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                      <div class="testimonial-item">
+                        <img src="{% static 'img/thelast.jpeg' %}" class="testimonial-img" alt="">
+                      </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                      <div class="testimonial-item">
+                        <img src="{% static 'img/assasins.jpg' %}" class="testimonial-img" alt="">
+                      </div>
+                    </div>
+                </div>    
+              </div>
+            </div>    
+        </div>
+    </section>
+{% endblock hero %}

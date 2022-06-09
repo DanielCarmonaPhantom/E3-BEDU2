@@ -1,0 +1,41 @@
+{% extends 'users/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>Iniciar sesión</title>
+{% endblock title %}
+
+
+{% block hero %}
+<nav class="navbar bg-light">
+    <div class="container center text-center">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'users/img/E3_Logo.png' %}" alt="" width="30" height="24">
+      </a>
+      <h1 class='center'>Electronic Entertainment Expo</h1>
+
+    </div>
+  </nav>
+
+
+<div class="row">
+    <div class="col-6 fondo-login">s</div>
+    <div class="col-6">
+        <form method='post'>
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="exampleInputUsername" class="form-label">Usuario</label>
+              <input type="email" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp" name='username'>
+              <div id="emailHelp" class="form-text">Coloca tu nombre de usuario</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name='password'>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reiniciar</button>
+          </form>
+    </div>
+</div>
+{% endblock hero %}
